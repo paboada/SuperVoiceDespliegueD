@@ -7,7 +7,7 @@ queue = sqs.get_queue_by_name(QueueName='sqs_concursos')
 url_queue=queue.url
 
 cont = 0
-while True
+while True:
     messages = queue.receive_messages(QueueUrl=url_queue, AttributeNames=['All'], MessageAttributeNames=['All'], MaxNumberOfMessages=10) # adjust MaxNumberOfMessages if needed
     #if 'Messages' in messages: # when the queue is exhausted, the response dict contains no 'Messages' key
     print("Longitud de mensajes" , len(messages))
