@@ -4,6 +4,7 @@ import pydub
 import glob
 import shutil
 import smtplib
+import time
 
 print("Inicio de la Ejecucion de batchMP3.py adaptado para sqs")
 print(time.strftime("%d/%m/%y %H:%M:%S"))
