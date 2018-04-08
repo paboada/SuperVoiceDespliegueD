@@ -11,7 +11,7 @@ def sqs_registrar_mensaje(id_audio, archivo_original):
                                                         'id_audio': {
                                                                     'Value': id_audio,
                                                                     'DataType': 'Number'
-                                                                    }
+                                                                    },
                                                         'archivo_original': {
                                                                     'StringValue': archivo_original,
                                                                     'DataType': 'String'
