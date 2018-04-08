@@ -20,7 +20,7 @@ while cont<10:
     #print(message.message_attributes)
         print(message.message_attributes['archivo_original']['StringValue'])
         print(message.message_attributes['id_audio']['StringValue'])
-        cont=cont+1
+    cont=cont+1
     #print(message.receipt_handle)
     #message.delete()
 # next, we delete the message from the queue so no one else will process it again
