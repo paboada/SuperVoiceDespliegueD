@@ -31,9 +31,12 @@ email_pass=os.environ["SES_EMAIL_HOST_PASSWORD"]
 #path_procesados = 'D:/01_ESTUDIOS/MAESTRIA/4_APLICACIONES_CLOUD/Proyecto_1_to_mp3/procesados/'
 
 #rutas PRODUCCION
-path_media = '/home/ubuntu/media/'
-path_procesados = '/home/ubuntu/media/procesados/'
+#path_media = '/home/ubuntu/media/'
+#path_procesados = '/home/ubuntu/media/procesados/'
 
+#rutas DESARROLLO WEBSERVER EC2
+path_media = '/home/ec2-user/Proyecto_3_D/media/'
+path_procesados = '/home/ec2-user/Proyecto_3_D/procesados/'
 
 
 # Create SQS client
