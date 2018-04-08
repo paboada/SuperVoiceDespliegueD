@@ -271,7 +271,7 @@ def enviar_audio(request,id_concurso):
                 audio.estado = "Convertido"
                 audio.archivo_convertido = audio.archivo_original
                 audio.save()
-            sqs_registrar_mensaje(AudioLocutorNuevo.id, request.POST['archivo_original'])
+            sqs_registrar_mensaje(AudioLocutorNuevo.id, audio.archivo_original)
     else:
         form = forms.FormularioEnvioAudio()
 
