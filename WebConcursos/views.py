@@ -11,6 +11,7 @@ from .models import Concurso, UsuarioCustom, ListaLocutores,AudioLocutor, Empres
 from WebConcursos.forms import UserCreationCustom
 from django.core.mail import EmailMessage, send_mail
 from django.core.files.storage import FileSystemStorage
+
 #sqs
 from WebConcursos.sqs_views import sqs_registrar_mensaje
 
@@ -271,6 +272,7 @@ def enviar_audio(request,id_concurso):
                 audio.estado = "Convertido"
                 audio.archivo_convertido = audio.archivo_original
                 audio.save()
+			#sqs
             sqs_registrar_mensaje(str(p_id_audio), nombre_archivo)
     else:
         form = forms.FormularioEnvioAudio()
