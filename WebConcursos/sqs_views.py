@@ -9,7 +9,7 @@ def sqs_registrar_mensaje(id_audio, archivo_original):
     response = queue.send_message(MessageBody='Registrando Mensaje',
                                   MessageAttributes={
                                                         'id_audio': {
-                                                                    'Value': id_audio,
+                                                                    'StringValue': id_audio,
                                                                     'DataType': 'Number'
                                                                     },
                                                         'archivo_original': {
